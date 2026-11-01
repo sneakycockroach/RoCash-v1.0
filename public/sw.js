@@ -40,6 +40,12 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const requestUrl = new URL(event.request.url);
 
+  // BLOCK Netlify's injected badge script
+  if (requestUrl.pathname.includes('.netlify/scripts/hud')) {
+    event.respondWith(new Response('', { status: 204, statusText: 'No Content' }));
+    return;
+  }
+
   // NEVER cache supabase or external APIs
   if (
     requestUrl.hostname.includes('supabase.co') ||
