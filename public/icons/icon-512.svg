@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#FF8A1F"/>
+  <!-- 8px darker bottom edge -->
+  <path d="M 0 420 Q 0 512 112 512 L 400 512 Q 512 512 512 420 L 512 400 L 0 400 Z" fill="#D96F0A"/>
+  <!-- Ro brand text in bold rounded dark ink -->
+  <text x="256" y="326" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="220" font-weight="900" fill="#2B2622" text-anchor="middle" letter-spacing="-8">Ro</text>
+</svg>

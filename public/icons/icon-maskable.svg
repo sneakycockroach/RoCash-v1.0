@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Full bleed background for maskable icon -->
+  <rect width="512" height="512" fill="#FF8A1F"/>
+  <!-- Centered emblem in safe zone (within 410x410 circle) -->
+  <rect x="76" y="76" width="360" height="360" rx="80" fill="#FF8A1F"/>
+  <path d="M 76 376 Q 76 436 156 436 L 356 436 Q 436 436 436 376 L 436 360 L 76 360 Z" fill="#D96F0A"/>
+  <text x="256" y="300" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="160" font-weight="900" fill="#2B2622" text-anchor="middle" letter-spacing="-6">Ro</text>
+</svg>

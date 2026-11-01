@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary-orange: #FF8A1F;
+    --color-primary-edge: #D96F0A;
+    --color-savings-green: #2DBE6C;
+    --color-savings-edge: #1F9A52;
+    --color-info-blue: #3AA0FF;
+    --color-info-edge: #1A82E2;
+    --color-xp-yellow: #FFC93C;
+    --color-xp-edge: #D9A216;
+    --color-streak: #F2542D;
+    --color-streak-edge: #C73B17;
+    --color-error: #FF4B4B;
+    --color-error-edge: #D62828;
+    --color-ink: #2B2622;
+    --color-secondary: #8A837B;
+    --color-card-fill: #F7F4EF;
+    --color-border: #E8E5E0;
+    --color-soft-orange: #FFF1E4;
+    --color-soft-green: #E6F7EE;
+
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-ink);
+  }
+
+  body {
+    background-color: #F0ECE4;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Hide scrollbar for smooth visual aesthetic */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tabular numerals utility for money */
+.tabular, .tabular-num, .num-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Chunky button style */
+.btn-chunky {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Chunky orange button */
+.btn-chunky-primary {
+  background-color: #FF8A1F;
+  color: #2B2622 !important;
+  box-shadow: 0 4px 0 #D96F0A;
+}
+.btn-chunky-primary:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #D96F0A;
+}
+
+/* Chunky green button */
+.btn-chunky-green {
+  background-color: #2DBE6C;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 #1F9A52;
+}
+.btn-chunky-green:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1F9A52;
+}
+
+/* Chunky neutral/card button */
+.btn-chunky-neutral {
+  background-color: #F7F4EF;
+  color: #2B2622;
+  box-shadow: 0 4px 0 #E8E5E0;
+  border: 1px solid #E8E5E0;
+}
+.btn-chunky-neutral:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #E8E5E0;
+}
+
+/* Chunky red / danger button */
+.btn-chunky-danger {
+  background-color: #FF4B4B;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 #D62828;
+}
+.btn-chunky-danger:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #D62828;
+}
+
+/* Chunky blue button */
+.btn-chunky-blue {
+  background-color: #3AA0FF;
+  color: #FFFFFF;
+  box-shadow: 0 4px 0 #1A82E2;
+}
+.btn-chunky-blue:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1A82E2;
+}
+
+/* Respect prefers-reduced-motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .btn-chunky-primary:active:not(:disabled),
+  .btn-chunky-green:active:not(:disabled),
+  .btn-chunky-neutral:active:not(:disabled),
+  .btn-chunky-danger:active:not(:disabled),
+  .btn-chunky-blue:active:not(:disabled) {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "RoCash",
+  "description": "A gamified daily spending and savings tracker for Ugandans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
