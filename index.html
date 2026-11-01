@@ -34,5 +34,18 @@
         });
       }
     </script>
+    <script>
+  // Automatically remove the Netlify badge if present
+  window.addEventListener('DOMContentLoaded', () => {
+    const badge = document.getElementById('netlify-badge') || document.querySelector('.netlify-badge');
+    if (badge) badge.remove();
+
+    // Alternatively, observe and remove any injected netlify badge elements
+    const observer = new MutationObserver((mutations) => {
+      document.querySelectorAll('iframe[src*="netlify"], #netlify-badge').forEach(el => el.remove());
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
   </body>
 </html>
